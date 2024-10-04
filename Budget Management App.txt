@@ -1,0 +1,91 @@
+Budget Management App
+
+
+User Interface (UI) for entering expenses and budgets.
+
+Data Management to store expenses (using SQLite or Room Database).
+
+Visualization using a chart library like MPAndroidChart to display spending by category.
+
+Budget Alerts to notify users if their spending exceeds the set budget.
+
+Prerequisites:
+
+Android Studio: Make sure you have Android Studio installed.
+
+MPAndroidChart Library: Add the MPAndroidChart library for charts.
+
+gradle
+
+implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+add latest version on it
+
+
+ Project Structure
+
+The main components of the application will be:
+
+MainActivity.java: To handle the main UI and logic for adding expenses and setting budgets.
+
+Expense.java: A model class for the expense.
+
+Database (Room or SQLite): To store expense data.
+
+Visualization (Pie Chart or Bar Chart): To show how much the user has spent by category.
+
+2. User Interface (XML Layout)
+We'll create a simple UI in XML for adding expenses, setting a budget, and visualizing spending habits.
+
+User Interface XML file--
+
+
+layout contains:
+
+Text input fields for budget and expenses.
+
+Buttons for adding expenses and viewing charts.
+
+A PieChart component for visualizing expenses.
+
+
+MainActivity JAVA file--
+
+Budget Management:
+
+Users input a budget using the setBudgetBtn. If the total spending exceeds this budget, a warning message is displayed.
+
+Adding Expenses:
+
+Users can input an expense category and amount. When the expense is added, it's tracked in a HashMap<String, Float> where the key is the category and the value is the total amount spent in that category.
+
+Viewing Spending Habits:
+
+The viewSpending() method generates a pie chart using MPAndroidChart based on the user’s spending by category.
+
+
+
+
+
+Add Model Class 
+
+Model Class for Expense JAVA file--
+
+You can create a simple model class for managing expense data. Here’s an example:
+
+Database Setup
+
+For persistent data storage, you can use Room or SQLite to save expenses and budgets. Here is a basic example using Room:
+
+gradle
+
+implementation "androidx.room:room-runtime:2.3.0"
+annotationProcessor "androidx.room:room-compiler:2.3.0"
+
+
+add latest version on it
+
+Define the Expense entity and database setup. This step would allow the app to store data persistently and access historical expenses across sessions.
+
+
+

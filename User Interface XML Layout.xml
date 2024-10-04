@@ -1,0 +1,70 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Budget Section -->
+    <TextView
+        android:id="@+id/budgetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Monthly Budget:"
+        android:textSize="18sp"/>
+    
+    <EditText
+        android:id="@+id/editBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter budget amount"/>
+
+    <Button
+        android:id="@+id/setBudgetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Budget"/>
+
+    <!-- Add Expense Section -->
+    <TextView
+        android:id="@+id/expenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add an Expense:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter category"/>
+
+    <EditText
+        android:id="@+id/editAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"/>
+
+    <Button
+        android:id="@+id/addExpenseBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"/>
+
+    <!-- Button to View Spending -->
+    <Button
+        android:id="@+id/viewSpendingBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Spending Habits"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Placeholder for Chart -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
